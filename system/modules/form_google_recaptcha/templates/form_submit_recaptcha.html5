@@ -13,7 +13,7 @@ $sitekey = '';
   <script>
   function onSubmit_<?= $this->id; ?>(token) 
   {
-    jQuery('button[data-sitekey="<?= $sitekey; ?>"]').parents('form').submit();
+    document.querySelector('button[data-sitekey="<?= $sitekey; ?>"]').closest('form').submit();
   }
 </script>
 <?php $this->endblock(); ?>

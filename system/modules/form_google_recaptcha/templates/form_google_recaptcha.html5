@@ -21,7 +21,7 @@ $GLOBALS['TL_JAVASCRIPT'][] = 'https://www.google.com/recaptcha/api.js';
   <script>
   function onSubmit_<?= $this->id; ?>(token)
 	{
-    jQuery('button[data-sitekey="<?= $this->sitekey; ?>"]').parents('form').submit();
+    document.querySelector('button[data-sitekey="<?= $this->sitekey; ?>"]').closest('form').submit();
   }
 </script>
 <?php $this->endblock(); ?>
